@@ -65,3 +65,5 @@ content:
 - Find min and max
 - Print comparisons
 - Convert to char array
+- Find a block that may contain the target value
+- Count comparisons
