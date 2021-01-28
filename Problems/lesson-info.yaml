@@ -67,3 +67,6 @@ content:
 - Convert to char array
 - Find a block that may contain the target value
 - Count comparisons
+- Reverse input text
+- Convert to bytes
+- Count words
