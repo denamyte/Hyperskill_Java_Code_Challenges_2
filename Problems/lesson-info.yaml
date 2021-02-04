@@ -70,3 +70,6 @@ content:
 - Reverse input text
 - Convert to bytes
 - Count words
+- Time as a string
+- Books as strings
+- Convert vehicles and cars to string

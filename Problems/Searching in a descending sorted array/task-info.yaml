@@ -45,8 +45,5 @@ files:
     }
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/3132#comment
-status: Solved
-feedback:
-  message: <html>Correct solution</html>
-  time: Fri, 22 Jan 2021 23:02:16 UTC
+status: Failed
 record: -1
