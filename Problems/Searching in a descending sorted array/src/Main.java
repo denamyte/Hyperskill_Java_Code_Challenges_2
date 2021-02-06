@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -13,10 +12,10 @@ public class Main {
             int mid = left + (right - left) / 2;
 
             if (elem == array[mid]) {
-                while (elem == array[mid] && mid > 0) {
+                while (mid > 0 && elem == array[mid - 1]) {
                     mid--;
                 }
-                return mid + 1;
+                return mid;
             } else if (elem > array[mid]) {
                 right = mid - 1;
             } else {
@@ -29,15 +28,17 @@ public class Main {
     /* Do not change code below */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int elem = scanner.nextInt();
-        ArrayList<Integer> list = new ArrayList<>();
-        while (scanner.hasNextInt()) {
-            list.add(scanner.nextInt());
-        }
-        int[] array = new int[list.size()];
+        int n = scanner.nextInt();
+        int[] array = new int[n];
         for (int i = 0; i < array.length; i++) {
-            array[i] = list.get(i);
+            array[i] = scanner.nextInt();
         }
-        System.out.println(binarySearch(elem, array));
+
+        int m = scanner.nextInt();
+        for (int i = 0; i < m; i++) {
+            int elem = scanner.nextInt();
+            System.out.print(binarySearch(elem, array));
+            System.out.print(i < m - 1 ? " " : "\n");
+        }
     }
 }
