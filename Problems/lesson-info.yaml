@@ -76,3 +76,6 @@ content:
 - Account
 - Users as strings
 - Shape hierarchy
+- The first element
+- Check for null
+- Invert an array
