@@ -87,3 +87,7 @@ content:
 - Phone Book
 - String reverser
 - Field count
+- Declared fields
+- Rehashing
+- Removing
+- Implementing the EntrySet method
