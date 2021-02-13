@@ -19,5 +19,8 @@ files:
     \ static void main(String[] args) {\n        // put your code here\n    }\n}"
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/7147#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Fri, 12 Feb 2021 13:47:51 UTC
 record: -1
