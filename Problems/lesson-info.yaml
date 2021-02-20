@@ -99,3 +99,5 @@ content:
 - An anonymous class with three methods
 - Field value
 - Annotated fields
+- Constructor Checker
+- Serializable user
