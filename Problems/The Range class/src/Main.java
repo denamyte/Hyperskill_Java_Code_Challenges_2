@@ -1,7 +1,3 @@
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.Serializable;
-
 /**
  * Represents inclusive integer range.
  */
@@ -27,15 +23,15 @@ class Range implements Serializable {
         this.to = to;
     }
 
+    private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
+        ois.defaultReadObject();
+        checkConstraints(from, to);
+    }
+
     private static void checkConstraints(int from, int to) {
         if (from > to) {
             throw new IllegalArgumentException("Start is greater than end");
         }
-    }
-
-    private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
-        ois.defaultReadObject();
-        checkConstraints(from, to);
     }
 
     public int getFrom() {
