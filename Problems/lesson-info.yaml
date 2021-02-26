@@ -114,3 +114,7 @@ content:
 - Count the number of merge operations
 - Merge all sequences
 - The number of inversions
+- Filtering the list
+- Sorting sequences
+- The first index of a sublist
+- Multiple swaps
