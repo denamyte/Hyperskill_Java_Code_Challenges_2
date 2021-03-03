@@ -123,3 +123,7 @@ content:
 - Removing duplicates and sorting
 - Strict superset
 - Creating a set
+- Implement Runnable
+- Working with queue
+- The LIFO principle in action
+- Getting the max element of a stack
