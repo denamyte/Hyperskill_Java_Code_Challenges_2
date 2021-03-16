@@ -155,3 +155,5 @@ content:
 - Count public methods
 - A lambda expression with seven arguments
 - Ternary predicate
+- The number of operations
+- Partial sorting
