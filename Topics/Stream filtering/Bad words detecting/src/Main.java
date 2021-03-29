@@ -10,7 +10,7 @@ class BadWordsDetector {
         return Stream.of(text.split(" "))
                 .filter(badWords::contains)
                 .distinct()
-                .sorted();
+                .sorted();  
     }
 
     /* Do not change the code below */
