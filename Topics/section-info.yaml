@@ -5,3 +5,4 @@ content:
 - Stream filtering
 - The List interface
 - Map and flatMap
+- The utility class Collections
