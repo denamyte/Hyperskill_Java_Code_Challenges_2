@@ -7,3 +7,6 @@ content:
 - Map and flatMap
 - The utility class Collections
 - Reduction methods
+- Collectors
+- Streams of primitives
+- Strategy
