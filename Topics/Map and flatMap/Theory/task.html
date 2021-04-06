@@ -71,7 +71,7 @@ class AccountInfo {
         }).collect(Collectors.toList());</code></pre> 
   <p>The code above will <em>map</em> each <code class="language-java">Account</code> object to the new <code class="language-java">AccountInfo</code> object and <em>collect</em> it to the new list of <code class="language-java">AccountInfo</code> objects.</p> 
   <h2>Primitive-specialized types of the map operation</h2> 
-  <p>Primitive-specialized streams such as <code class="language-java">IntStream</code>, <code class="language-java">LongStream</code>, or <code class="language-java">DoubleStream</code> also have the <code class="language-java">map</code> method that maps the primitive value to another primitive of the same type. However, it is useful to have a way to map a primitive value to the object. For that primitive-specialized streams have a <code class="language-java">mapToObj</code><strong> </strong>method.</p> 
+  <p>Primitive-specialized streams such as <code class="language-java">IntStream</code>, <code class="language-java">LongStream</code>, or <code class="language-java">DoubleStream</code> also have the <code class="language-java">map</code> method that maps the primitive value to another primitive of the same type. However, it is useful to have a way to map a primitive value to an object. For that primitive-specialized streams have the <code class="language-java">mapToObj</code><strong> </strong>method.</p> 
   <p>Let's consider an example where a class <code class="language-java">Planet</code> is given:</p> 
   <pre><code class="language-java">class Planet {
     private String name;
