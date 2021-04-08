@@ -6,20 +6,29 @@ class Time {
     int minute;
     int second;
 
+    private Time(int hour, int minute, int second) {
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+    }
+
     public static Time noon() {
-        // write your code here
+        return new Time(12, 0, 0);
     }
 
     public static Time midnight() {
-        // write your code here
+        return new Time(0, 0, 0);
     }
 
     public static Time ofSeconds(long seconds) {
-        // write your code here
+        return new Time((int) (seconds / 3600 % 24), (int) (seconds % 3600 / 60), (int) (seconds % 60));
     }
 
     public static Time of(int hour, int minute, int second) {
-        // write your code here
+        if (hour < 0 || hour > 23 || minute < 0 || minute > 59 || second < 0 || second > 59) {
+            return null;
+        }
+        return new Time(hour, minute, second);
     }
 }
 
