@@ -18,3 +18,5 @@ content:
 - Infinite streams
 - Factory method
 - The Map interface
+- Stream pipelines
+- Template method
