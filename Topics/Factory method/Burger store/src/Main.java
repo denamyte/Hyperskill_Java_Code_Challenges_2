@@ -1,6 +1,15 @@
+import java.util.stream.Stream;
+
 class TestDrive {
     public static void main(String[] args) throws InterruptedException {
-        /* write your code here */
+        BurgerFactory factory = new BurgerStore();
+        Stream.of("Chinese Burger", "American Burger", "Russian Burger")
+                .forEach(name -> {
+                    try {
+                        factory.orderBurger(name);
+                    } catch (InterruptedException ignored) {
+                    }
+                });
     }
 }
 
@@ -15,9 +24,9 @@ abstract class BurgerFactory {
             return null;
         }
         System.out.println("Making a " + burger.getName());
-        burger./* write your code here */
-        burger./* write your code here */
-        burger./* write your code here */
+        burger.putBun();
+        burger.putCutlet();
+        burger.putSauce();
         Thread.sleep(1500L);
         System.out.println("Done a " + burger.getName() + "\n");
         return burger;
@@ -28,9 +37,12 @@ class BurgerStore extends BurgerFactory {
     @Override
     Burger createBurger(String type) {
         switch (type) {
-            case /* write your code here */
-            case /* write your code here */
-            case /* write your code here */
+            case "Chinese Burger":
+                return new ChineseBurger();
+            case "American Burger":
+                return new AmericanBurger();
+            case "Russian Burger":
+                return new RussianBurger();
             default:
                 return null;
         }
@@ -63,13 +75,19 @@ abstract class Burger {
 }
 
 class ChineseBurger extends Burger {
-    /* write your code here */
+    ChineseBurger() {
+        super("Chinese Burger");
+    }
 }
 
 class AmericanBurger extends Burger {
-    /* write your code here */
+    AmericanBurger() {
+        super("American Burger");
+    }
 }
 
 class RussianBurger extends Burger {
-    /* write your code here */
+    RussianBurger() {
+        super("Russian Burger");
+    }
 }
