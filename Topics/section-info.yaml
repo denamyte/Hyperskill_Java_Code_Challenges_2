@@ -22,3 +22,5 @@ content:
 - Template method
 - Queue and Stack
 - Parallel streams
+- Iterator and Iterable
+- Hamming distance in Java

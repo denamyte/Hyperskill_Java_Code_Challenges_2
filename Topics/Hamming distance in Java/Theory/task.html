@@ -1,0 +1,32 @@
+<html>
+ <head></head>
+ <body>
+  <p>Hamming distance is a simple metric that allows estimating similarity between two strings of equal length. This topic explains how the algorithm for finding the Hamming distance can be implemented in Java.</p> 
+  <h2>Implementation in Java</h2> 
+  <p>Below is an implementation of a method that allows calculating the Hamming distance for two strings:</p> 
+  <pre><code class="language-java">public static int hammingDistance(String str1, String str2) {
+    int hammingDist = 0;
+
+    for (int i = 0; i &lt; str1.length(); i++) {
+        if (str1.charAt(i) != str2.charAt(i)) {
+            hammingDist += 1;
+        }
+    }
+
+    return hammingDist;
+}</code></pre> 
+  <p>The method takes two strings as arguments and returns their Hamming distance (the strings are supposed to be of equal length). The algorithm is pretty straightforward: </p> 
+  <ol> 
+   <li>First, we create a variable to store the Hamming distance and initialize it with zero.</li> 
+   <li>Then, using a <code class="language-java">for</code> loop, we iterate through each position and compare corresponding symbols. In case of a mismatch, we increment the value of the variable. </li> 
+   <li>After all the symbols are processed, the variable contains the Hamming distance and we return it as a final result.</li> 
+  </ol> 
+  <h2>Usage example</h2> 
+  <p>Below you can find an example of how to use the implemented method:</p> 
+  <pre><code class="language-java">int hammingDist = hammingDistance("microscope", "microphone");
+System.out.println(hammingDist); // 3</code></pre> 
+  <p>Since there are three mismatched symbols in the above strings, the hamming distance between them is equal to three.</p> 
+  <h2>Summary</h2> 
+  <p>In this topic, we have considered how the algorithm for finding the Hamming distance can be implemented in Java. For now, you should be confident about how to apply this algorithm to estimate the similarity between two strings of equal length. In the following topics, we will consider more sophisticated algorithms that allow for comparing strings of different sizes.</p>
+ </body>
+</html>
