@@ -1,39 +1,19 @@
-// You can experiment here, it won’t be checked
-
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
-
-public class Task {
-    public static void main(String[] args) {
-        final List<Monitor.LogEntry> entries = List.of(
-                new Monitor.LogEntry(new Date(), "aaa", "url1"),
-                new Monitor.LogEntry(new Date(), "aaa", "url1"),
-                new Monitor.LogEntry(new Date(), "aaa", "url1"),
-                new Monitor.LogEntry(new Date(), "aaa", "url1"),
-                new Monitor.LogEntry(new Date(), "aaa", "url2"),
-                new Monitor.LogEntry(new Date(), "aaa", "url2"),
-                new Monitor.LogEntry(new Date(), "aaa", "url2"),
-                new Monitor.LogEntry(new Date(), "aaa", "url3"),
-                new Monitor.LogEntry(new Date(), "aaa", "url3")
-        );
-        System.out.println(Monitor.getUrlToNumberOfVisited(entries));
-    }
-}
 
 class Monitor {
 
     public static Map<String, Long> getUrlToNumberOfVisited(List<LogEntry> logs) {
         return logs.stream()
-                .collect(Collectors.groupingBy(LogEntry::getUrl, Collectors.counting()));
+                .collect(groupingBy(LogEntry::getUrl, counting()));
     }
+
 
 
     static class LogEntry {
 
-        private final Date created;
-        private final String login;
+        private Date created;
+        private String login;
         private String url;
 
         public LogEntry(Date created, String login, String url) {

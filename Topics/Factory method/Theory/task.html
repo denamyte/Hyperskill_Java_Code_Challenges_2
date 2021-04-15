@@ -43,7 +43,7 @@
         System.out.println("Attaching tabletop");
     }
 }</code></pre> 
-  <p>Second, we should define two specific tables: <em>TableOffice </em>and <em>TableKitchen</em> classes. Note that the abstract class has a constructor, which is sometimes tricky for Java developers with little experience. </p> 
+  <p>Second, we should define two specific tables: the <em>TableOffice </em>and <em>TableKitchen</em> classes. Note that the abstract class has a constructor, which is sometimes tricky for Java developers with little experience. </p> 
   <pre><code class="language-java">class TableOffice extends Table {
     TableOffice(String name) {
         super(name);
@@ -55,7 +55,7 @@ class TableKitchen extends Table {
         super(name);
     }
 }</code></pre> 
-  <p>Third, let's create your factory. I called it <em>TableStore, </em>the implementation of abstract <em>TableFactory: </em></p> 
+  <p>Third, let's create our factory. I called it <em>TableStore, </em>the implementation of the abstract <em>TableFactory: </em></p> 
   <pre><code class="language-java">abstract class TableFactory {
 
     abstract Table createTable(String type);
@@ -107,8 +107,8 @@ Created Kitchen Table</code></pre>
   <h2 style="text-align: center;">Conclusion</h2> 
   <p>Factory Method comes in handy in situations when you need to:</p> 
   <ul> 
-   <li>have a complicated process for constructing the objects;</li> 
-   <li>reduce the time to add another product;</li> 
+   <li>deal with a complicated process of constructing objects;</li> 
+   <li>reduce the time for adding another product;</li> 
    <li>replace one product with another.<br> </li> 
   </ul>
  </body>
