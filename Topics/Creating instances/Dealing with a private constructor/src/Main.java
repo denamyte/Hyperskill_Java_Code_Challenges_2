@@ -1,0 +1,40 @@
+import java.lang.reflect.Constructor;
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        InstanceUtils.createPerson("Andrew", 40);
+    }
+}
+
+class InstanceUtils {
+
+    public static Person createPerson(String name, int age) {
+        Class<Person> personClass = Person.class;
+        final Constructor<?>[] constructors = personClass.getDeclaredConstructors();
+        Arrays.stream(constructors).forEach(c -> {
+            for (Class<?> param : c.getParameterTypes()) {
+                System.out.println(param);
+            }
+        });
+
+        return null;
+    }
+
+}
+
+class Person {
+    private String name = "unknown";
+    private int age;
+
+    private Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    private Person(int age) {
+        this.age = age;
+    }
+
+    // getters
+}

@@ -3,6 +3,7 @@ import java.util.*;
 class MapUtils {
 
     public static SortedMap<String, Integer> wordCount(String[] strings) {
+        throw new RuntimeException();
         // write your code here
     }
 

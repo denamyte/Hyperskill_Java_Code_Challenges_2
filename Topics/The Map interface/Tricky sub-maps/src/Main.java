@@ -2,6 +2,7 @@ import java.util.*;
 
 class MapUtils {
     public static Map<Integer, String> getSubMap(TreeMap<Integer, String> map) {
+        throw new RuntimeException();
         // Write your code here
     }
 }

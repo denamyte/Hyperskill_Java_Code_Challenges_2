@@ -18,18 +18,30 @@ abstract class Motor {
 }
 
 class PneumaticMotor extends Motor {
+    public PneumaticMotor(String model, long power) {
+        super(model, power);
+    }
     // write your code here ...
 }
 
 class HydraulicMotor extends Motor {
+    public HydraulicMotor(String model, long power) {
+        super(model, power);
+    }
     // write your code here ...
 }
 
 class ElectricMotor extends Motor {
+    public ElectricMotor(String model, long power) {
+        super(model, power);
+    }
     // write your code here ...
 }
 
 class WarpDrive extends Motor {
+    public WarpDrive(String model, long power) {
+        super(model, power);
+    }
     // write your code here ...
 }
 
@@ -41,6 +53,7 @@ class MotorFactory {
      */
     public static Motor make(char type, String model, long power) {
         // write your code here ...
+        throw new RuntimeException();
     }
 }
 
@@ -52,6 +65,6 @@ public class Main {
         final long power = scanner.nextLong();
         // write your code here ...
         scanner.close();
-       System.out.println(motor);
+//        System.out.println(motor);
     }
 }

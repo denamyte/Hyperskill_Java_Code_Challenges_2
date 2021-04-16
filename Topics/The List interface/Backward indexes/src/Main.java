@@ -5,6 +5,7 @@ public class Main {
 
     public static <T> T getElementByIndex(List<T> lst, int index) {
         // write your code here
+        throw new RuntimeException();
     }
 
     /* Do not change code below */
