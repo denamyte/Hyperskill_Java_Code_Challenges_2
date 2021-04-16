@@ -1,12 +1,6 @@
 import java.lang.reflect.Constructor;
 import java.util.Arrays;
 
-public class Main {
-    public static void main(String[] args) {
-        InstanceUtils.createPerson("Andrew", 40);
-    }
-}
-
 class InstanceUtils {
 
     public static Person createPerson(String name, int age) {
